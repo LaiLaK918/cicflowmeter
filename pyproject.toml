@@ -1,30 +1,21 @@
-[tool.poetry]
+[project]
 name = "cicflowmeter"
 version = "0.2.0"
-description = "CICFlowMeter Python Implementation"
-authors = ["Hieu Le <hieulw99@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
-license = "MIT"
-repository = "https://github.com/hieulw/cicflowmeter"
-packages = [
-    { include = "cicflowmeter", from = "src" },
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+  { name = "Hieu Le", email = "hieulw99@gmail.com" }
+]
+urls = { repository = "https://github.com/hieulw/cicflowmeter" }
+dependencies = [
+    "numpy==1.26.2",
+    "pytest>=8.3.5",
+    "requests>=2.32.3",
+    "scapy>=2.6.1",
+    "scipy==1.11.4",
 ]
 
-[tool.poetry.scripts]
-cicflowmeter = 'cicflowmeter.sniffer:main'
-
-
-[tool.poetry.dependencies]
-python = "^3.11"
-numpy = "^1.26.2"
-scipy = "^1.11.4"
-scapy = "^2.5.0"
-requests = "^2.31.0"
-
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[project.scripts]
+cicflowmeter = "cicflowmeter.sniffer:main"
