@@ -5,9 +5,11 @@
 ### Installation
 
 ```sh
-git clone https://github.com/hieulw/cicflowmeter
+git clone https://github.com/LaiLaK918/cicflowmeter.git
 cd cicflowmeter
-poetry install
+uv venv
+uv sync
+uv pip install -e .
 ```
 
 ### Usage
